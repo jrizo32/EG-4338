@@ -1,0 +1,37 @@
+/** Programming Assignment 1- LCM Game**/
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main ()
+{
+  int num1, num2, minNum;
+  char string[25];
+ {				// Got it to give me two different numbers srand
+    srand(time (NULL));
+    num1 = rand() % 15 + 1;
+    num2 = rand() % 15 + 1;
+  } 
+  printf ("Hello, what is your name?:");
+  scanf ("%[^\n]*c", string);
+  printf ("Hello %s, welcome to the LCM Game!\n", string);
+   
+    
+    printf ("Can you tell me what the LCM for is? \n");  
+    
+    minNum = (num1 > num2) ? num1 : num2;
+            while (1) 
+            {
+            if (minNum % num1 == 0 && minNum % num2 == 0) 
+		    {
+            printf("The LCM of %d and %d is %d.", num1, num2, minNum);
+            break;
+            }
+            ++minNum;
+            } 
+  
+ return 0;
+}
+
+    
+    
+    
